@@ -8,19 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Comntroller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewComntroller" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYC-Lb-7dZ">
-                                <rect key="frame" x="146.66666666666666" y="640.66666666666663" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYC-Lb-7dZ">
+                                <rect key="frame" x="156" y="606" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="4mD-0S-AUy"/>
-                                    <constraint firstAttribute="height" constant="100" id="rhg-zY-VFs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="HQQ-m5-Q21"/>
+                                    <constraint firstAttribute="width" constant="80" id="XGY-SO-YxB"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="bwG-Mq-Jd5"/>
+                                    <constraint firstAttribute="height" constant="80" id="rhg-zY-VFs"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
@@ -30,11 +32,20 @@
                                     <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2T1-Vz-RQI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-qN-nnx">
-                                <rect key="frame" x="96.666666666666686" y="360.66666666666669" width="200" height="200.00000000000006"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSD-Vq-OtR">
+                                <rect key="frame" x="77" y="540" width="238" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="6hM-ON-chf"/>
-                                    <constraint firstAttribute="height" constant="200" id="QPq-58-gjU"/>
+                                    <constraint firstAttribute="height" constant="40" id="bkM-Gx-ZXr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-qN-nnx">
+                                <rect key="frame" x="114" y="351" width="164" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="W3E-TR-Giy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="kau-ZH-3WT"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
@@ -44,22 +55,19 @@
                                     <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOi-KA-ezg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSD-Vq-OtR">
-                                <rect key="frame" x="177" y="590.66666666666663" width="39" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HSD-Vq-OtR" firstAttribute="centerX" secondItem="hbB-qN-nnx" secondAttribute="centerX" id="DIx-Fo-xUx"/>
-                            <constraint firstItem="hbB-qN-nnx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LYH-cW-fuC"/>
-                            <constraint firstItem="hbB-qN-nnx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="V4b-fE-OK6"/>
-                            <constraint firstItem="OYC-Lb-7dZ" firstAttribute="centerX" secondItem="HSD-Vq-OtR" secondAttribute="centerX" id="nXK-w3-X0l"/>
-                            <constraint firstItem="OYC-Lb-7dZ" firstAttribute="top" secondItem="HSD-Vq-OtR" secondAttribute="bottom" constant="20" id="ncC-Bx-DCz"/>
-                            <constraint firstItem="HSD-Vq-OtR" firstAttribute="top" secondItem="hbB-qN-nnx" secondAttribute="bottom" constant="30" id="pU9-cw-CDf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OYC-Lb-7dZ" secondAttribute="trailing" constant="117" id="2gt-ef-XYA"/>
+                            <constraint firstItem="OYC-Lb-7dZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="aII-Wc-I6L"/>
+                            <constraint firstItem="HSD-Vq-OtR" firstAttribute="top" secondItem="hbB-qN-nnx" secondAttribute="bottom" constant="25" id="cMA-7h-KrL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HSD-Vq-OtR" secondAttribute="trailing" constant="10" id="ctT-L5-Fo2"/>
+                            <constraint firstItem="OYC-Lb-7dZ" firstAttribute="top" secondItem="HSD-Vq-OtR" secondAttribute="bottom" constant="34" id="ebu-Fx-xg1"/>
+                            <constraint firstItem="HSD-Vq-OtR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kta-Yq-b0e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hbB-qN-nnx" secondAttribute="trailing" constant="117" id="pHp-5R-sB1"/>
+                            <constraint firstItem="hbB-qN-nnx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="r4s-bv-HR4"/>
+                            <constraint firstItem="hbB-qN-nnx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="248" id="z6F-Xo-27n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ogb-ys-4Bs"/>
@@ -67,6 +75,7 @@
                         <outlet property="dashboardText" destination="HSD-Vq-OtR" id="V6H-IO-E5H"/>
                         <outlet property="recordingButton" destination="hbB-qN-nnx" id="EYn-qo-TJa"/>
                         <outlet property="stopRecordingButton" destination="OYC-Lb-7dZ" id="kHv-QS-xmK"/>
+                        <segue destination="VSk-h7-vdO" kind="show" identifier="stopRecording" id="zaT-pf-D5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,8 +90,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="d4n-e4-5Lg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="linkColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MlB-uS-rPf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbi-aE-Nwy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,6 +121,9 @@
     <resources>
         <image name="RecordButton" width="155" height="155"/>
         <image name="Stop" width="155" height="155"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
